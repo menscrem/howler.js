@@ -1184,7 +1184,7 @@
         }
 
         // When the fade is complete, stop it and fire event.
-        if ((to < from && vol <= to) || (to > from && vol >= to)) {
+        if ((to <= from && vol <= to) || (to > from && vol >= to)) {
           clearInterval(sound._interval);
           sound._interval = null;
           sound._fadeTo = null;
